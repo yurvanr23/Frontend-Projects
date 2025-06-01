@@ -1,9 +1,48 @@
 :root{
-    --background: black;
+    --background: rgb(27, 25, 25);
     --primary-color: grey;
-    --secondary-color: lightgrey;
-    --accent-color: rgb(9, 151, 252);
-    --text-color: white;
+    --secondary-color: rgb(73, 69, 69);
+    --accent-color: rgb(8, 133, 222);
+    --text-color: rgb(203, 218, 246);
+}
+
+.darkmode{
+    --background: rgb(191, 189, 189);
+    --primary-color: rgb(50, 40, 40);
+    --secondary-color: rgb(109, 151, 249);
+    --accent-color: rgb(6, 41, 182);
+    --text-color: rgb(23, 21, 21);
+}
+
+#theme-switch{
+    height: 55px;
+    width: 55px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: none;
+}
+
+#theme-switch svg{
+    fill: var(--text-color);
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
 }
 
 *{
@@ -11,8 +50,14 @@
     padding: 0;
 }
 
+h1{
+    font-family: "Lilita One";
+    font-size: 16pt;
+    color: var(--text-color);
+}
+
 html{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Lobster;
     font-size: 16pt;
     color: var(--text-color);
 }
@@ -30,7 +75,7 @@ h1{
     margin-top: 100px;
     margin-bottom: 20px;
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     color: var(--accent-color);
@@ -75,7 +120,7 @@ form{
     border: none;
     border-radius: 1000px;
     font: inherit;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--background);
     cursor: pointer;
 }
